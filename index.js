@@ -1,5 +1,5 @@
 /* 
-***Squares of a Sorted Array***
+*** Squares of a Sorted Array ***
  Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order. 
  Input: nums = [-7,-3,2,3,11]
  Output: [4,9,9,49,121]
@@ -23,4 +23,22 @@ var sortedSquares = function(nums) {
 	}
 
 	return result;
+};
+
+/*
+*** Duplicate Zeros ***
+Given a fixed-length integer array arr, duplicate each occurrence of zero, shifting the remaining elements to the right.
+Input: arr = [1,0,2,3,0,4,5,0]
+Output:      [1,0,0,2,3,0,0,4]
+*/
+var duplicateZeros = function(arr) {
+for(let i = 0; i<arr.length;i++){
+    if(arr[i]===0){
+        arr.pop(); 
+        arr.splice(i+1,0,0);
+        i++
+    }
+}
+return arr; 
+
 };
