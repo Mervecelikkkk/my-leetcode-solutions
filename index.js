@@ -1,4 +1,4 @@
-/* 
+/* *******************************************************************************************************************************************************************
 *** Squares of a Sorted Array ***
  Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order. 
  Input: nums = [-7,-3,2,3,11]
@@ -25,7 +25,7 @@ var sortedSquares = function(nums) {
 	return result;
 };
 
-/*
+/* *******************************************************************************************************************************************************************
 *** Duplicate Zeros ***
 Given a fixed-length integer array arr, duplicate each occurrence of zero, shifting the remaining elements to the right.
 Input: arr = [1,0,2,3,0,4,5,0]
@@ -42,3 +42,43 @@ for(let i = 0; i<arr.length;i++){
 return arr; 
 
 };
+
+/* *******************************************************************************************************************************************************************
+*** Merge Sorted Array ***
+Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+Output: [1,2,2,3,5,6]
+*/
+
+var merge = function(nums1, m, nums2, n) {
+    let i = m - 1;
+    let j = n - 1;
+    let k = m + n - 1;
+    
+    while (i >= 0 && j >= 0) {
+        if (nums1[i] < nums2[j]) {
+            nums1[k] = nums2[j];
+            k--;
+            j--;
+        } else {
+            nums1[k] = nums1[i];
+            k--;
+            i--;
+        }
+    }
+    
+    while (j >= 0) {
+        nums1[k] = nums2[j];
+        k--;
+        j--;
+    }
+    
+    while (i >= 0) {
+        nums1[k] = nums1[i];
+        k--;
+        i--;
+    }
+    
+};
+
+
