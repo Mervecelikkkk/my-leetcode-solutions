@@ -115,5 +115,53 @@ var removeDuplicates = function(nums) {
 
 
 /* *******************************************************************************************************************************************************************
-***  ***
+*** Check If N and Its Double Exist ***
+Input: arr = [10,2,5,3]
+Output: true 
+(5*2=10)
 */
+var checkIfExist = function(arr) {
+    const set = new Set();
+    
+    for(let i = 0; i < arr.length; i ++) {
+      const currValue = arr[i];
+      
+      if(set.has(currValue)) {
+        return true
+      }
+      set.add(currValue / 2);
+      set.add(currValue * 2);
+    }
+  
+  return false;
+};
+
+/* *******************************************************************************************************************************************************************
+*** Valid Mountain Array ***
+Input: arr = [0,3,2,1]
+Output: true
+
+Input: arr = [3,5,5]
+Output: false
+*/
+var validMountainArray = function(arr) {
+
+    let left = 0,
+        right = arr.length - 1;
+    
+    while(arr[left] < arr[left + 1] || arr[right] < arr[right - 1]) {
+        
+        if(arr[left] < arr[left + 1]) {
+            ++left;
+        }
+        
+        if(arr[right] < arr[right - 1]) {
+            --right;
+        }
+    }
+    
+    if(left !== right || left === arr.length - 1 || right === 0) {
+        return false;
+    }
+    return true;
+};
