@@ -165,3 +165,32 @@ var validMountainArray = function(arr) {
     }
     return true;
 };
+
+/* *******************************************************************************************************************************************************************
+*** Find All Numbers Disappeared in an Array ***
+Input: nums = [4,3,2,7,8,2,3,1]
+Output: [5,6]
+*/
+var findDisappearedNumbers = function(nums) {
+
+    nums.forEach(number => {
+
+        const indexBasedOnThisValue = Math.abs(number) - 1
+
+        if (nums[indexBasedOnThisValue] > 0) {
+            nums[indexBasedOnThisValue] = nums[indexBasedOnThisValue] * -1
+        }
+    })
+    
+    const result = []
+    
+    for (let i=0; i<nums.length; i++) {
+        
+        if (nums[i] > 0) {
+            result.push(i + 1)
+        }
+    }
+    
+    return result
+    
+};
