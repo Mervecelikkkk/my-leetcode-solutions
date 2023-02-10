@@ -165,6 +165,37 @@ var validMountainArray = function(arr) {
     }
     return true;
 };
+/* *******************************************************************************************************************************************************************
+*** Replace Elements with Greatest Element on Right Side ***
+Input: arr = [17,18,5,4,6,1]
+Output: [18,6,6,6,1,-1]
+
+Explanation: 
+- index 0 --> the greatest element to the right of index 0 is index 1 (18).
+- index 1 --> the greatest element to the right of index 1 is index 4 (6).
+- index 2 --> the greatest element to the right of index 2 is index 4 (6).
+- index 3 --> the greatest element to the right of index 3 is index 4 (6).
+- index 4 --> the greatest element to the right of index 4 is index 5 (1).
+- index 5 --> there are no elements to the right of index 5, so we put -1.
+*/
+var replaceElements = function(arr) {
+    let currentMax = arr[arr.length - 1];
+    arr[arr.length - 1] = -1;
+
+    for (let i = arr.length - 2; i >= 0; i--) {
+        if (currentMax > arr[i]) {
+            arr[i] = currentMax;
+        } 
+        else 
+        {
+            const temp = currentMax;
+            currentMax = arr[i];
+            arr[i] = temp;
+        }
+    }
+    
+    return arr;
+};
 
 /* *******************************************************************************************************************************************************************
 *** Find All Numbers Disappeared in an Array ***
@@ -194,3 +225,31 @@ var findDisappearedNumbers = function(nums) {
     return result
     
 };
+
+/* *******************************************************************************************************************************************************************
+*** Squares of a Sorted Array ***
+Input: nums = [-4,-1,0,3,10]
+Output: [0,1,9,16,100]
+*/
+
+var sortedSquares = function(nums) {
+	let left = 0;
+	let right = nums.length - 1;
+	const result = new Array(nums.length);
+	let resultIndex = result.length - 1;
+
+	while (left <= right) {
+		if (Math.abs(nums[left]) > Math.abs(nums[right])) {
+			result[resultIndex] = nums[left] * nums[left];
+			left++;
+		} else {
+			result[resultIndex] = nums[right] * nums[right];
+			right--;
+		}
+		resultIndex--;
+	}
+
+	return result;
+};
+
+
