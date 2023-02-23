@@ -278,4 +278,33 @@ var sortedSquares = function(nums) {
 	return result;
 };
 
+/* *******************************************************************************************************************************************************************
+*** Max Consecutive Ones II ***
+Input: nums = [1,0,1,1,0]
+Output: 4
+Explanation: 
+- If we flip the first zero, nums becomes [1,1,1,1,0] and we have 4 consecutive ones.
+- If we flip the second zero, nums becomes [1,0,1,1,1] and we have 3 consecutive ones.
+The max number of consecutive ones is 4.
+*/
+   var findMaxConsecutiveOnes = function(nums) {
+    let max = 0;
+    let currMax = 0;
+    let currSect = 0;
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === 1) {
+            currSect++;
+        } else {
+            max = Math.max(max, currMax);
+            currMax = currSect;
+            currSect = 0;
+        }
+        currMax++;
+    }
+    
+    max = Math.max(max, currMax);
+    
+    return max;
+};
 
