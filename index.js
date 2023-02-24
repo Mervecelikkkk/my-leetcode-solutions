@@ -307,4 +307,17 @@ The max number of consecutive ones is 4.
     
     return max;
 };
+/* *******************************************************************************************************************************************************************
+*** Number of 1 Bits ***
+Input: n = 00000000000000000000000000001011
+Output: 3
+Explanation: The input binary string 00000000000000000000000000001011 has a total of three '1' bits.
+*/
+ 
+var hammingWeight = function(n) {
+    return n.toString(2)
+              .split("")
+              .filter(char => char === "1")
+              .length;    
+};
 
