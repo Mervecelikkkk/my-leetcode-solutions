@@ -320,4 +320,14 @@ var hammingWeight = function(n) {
               .filter(char => char === "1")
               .length;    
 };
+/* *******************************************************************************************************************************************************************
+*** Reverse Bits ***
+Input: n = 00000010100101000001111010011100
+Output:    964176192 (00111001011110000010100101000000)
+Explanation: The input binary string 00000000000000000000000000001011 has a total of three '1' bits.
+*/
+var reverseBits = function(n) {
+   
+    return parseInt(n.toString(2).split("").reverse().join("").padEnd(32, "0"), 2);
 
+};
