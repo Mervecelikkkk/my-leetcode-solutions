@@ -375,3 +375,25 @@ var hammingWeight = function(n) {
     
     return count;
 };
+/* *******************************************************************************************************************************************************************
+*** 338. Counting Bits ***
+Input: n = 5
+Output: [0,1,1,2,1,2]
+Explanation:
+0 --> 0
+1 --> 1
+2 --> 10
+3 --> 11
+4 --> 100
+5 --> 101
+*/
+   const output = [];
+    for (let i = 0; i <= n; i++) {
+        let value = 0;
+        const binaryString = i.toString(2);
+        for (let j = 0; j < binaryString.length; j++) {
+            value += Number(binaryString[j]);
+        }
+        output.push(value);
+    }
+    return output;
