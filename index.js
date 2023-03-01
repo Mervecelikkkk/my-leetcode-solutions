@@ -358,3 +358,20 @@ var grayCode = function(n) {
     return arr;
     
 };
+/* *******************************************************************************************************************************************************************
+*** 191. Number of 1 Bits ***
+Input: n = 00000000000000000000000000001011
+Output: 3
+Explanation: The input binary string 00000000000000000000000000001011 has a total of three '1' bits.
+*/
+var hammingWeight = function(n) {
+
+    let count = 0;
+    
+    while(n != 0) {
+        count += n & 1;
+        n = n >>> 1;
+    }
+    
+    return count;
+};
