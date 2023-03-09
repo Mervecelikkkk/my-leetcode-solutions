@@ -4,6 +4,8 @@ Given an integer numRows, return the first numRows of Pascal's triangle.
 
 In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
 
+![PascalTriangleAnimated2](https://user-images.githubusercontent.com/51165242/223754753-99e2b41d-b052-497e-8169-edaf6fddca21.gif)
+
 **Example 1:**
 ```
 **Input:** numRows = 5
