@@ -21,7 +21,7 @@ Input: numbers = [2,3,4], target = 6
 Output: [1,3]
 Explanation: The sum of 2 and 4 is 6. Therefore index1 = 1, index2 = 3. We return [1, 3].
 ```
-**Example 2:**
+**Example 3:**
 ```
 Input: numbers = [-1,0], target = -1
 Output: [1,2]
@@ -32,10 +32,10 @@ Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We ret
 
 - `2 <= numbers.length <= 3 * 104`
 - `-1000 <= numbers[i] <= 1000`
-- `numbers` is sorted in non-decreasing order.
+- `numbers` is sorted in **non-decreasing order**.
 - `-1000 <= target <= 1000`
 - The tests are generated such that there is **exactly one solution**.
 
-Source: [Leetcode.com](https://leetcode.com/explore/learn/card/array-and-string/205/array-two-pointer-technique/1154/)
+Source: [Leetcode.com](https://leetcode.com/explore/learn/card/array-and-string/205/array-two-pointer-technique/1153/)
 
  
