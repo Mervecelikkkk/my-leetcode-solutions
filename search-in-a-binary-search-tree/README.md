@@ -8,6 +8,8 @@ Find the node in the BST that the node's value equals `val` and return the subtr
 
 **Example 1:**
 
+![tree1](https://user-images.githubusercontent.com/51165242/236321540-f6565bb5-e048-4e92-bf76-66b726258349.jpg)
+
 
 ```
 Input: root = [4,2,7,1,3], val = 2
@@ -15,6 +17,9 @@ Output: [2,1,3]
 ```
 
 **Example 2:**
+
+![tree2](https://user-images.githubusercontent.com/51165242/236321566-d6a9aeee-98db-4def-b595-2896113e4e95.jpg)
+
 ```
 Input: root = [4,2,7,1,3], val = 5
 Output: []
