@@ -5,6 +5,9 @@ Given a linked list, swap every two adjacent nodes and return its head. You must
  
 
 **Example 1:**
+
+![swap_ex1](https://user-images.githubusercontent.com/51165242/236316681-099be525-01fc-440e-b304-0e69ff26b52c.jpg)
+
 ```
 Input: head = [1,2,3,4]
 Output: [2,1,4,3]
