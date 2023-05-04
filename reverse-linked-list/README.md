@@ -33,6 +33,6 @@ Output: []
 - `-5000 <= Node.val <= 5000`
 
 
-Source: [Leetcode.com](https://leetcode.com/explore/learn/card/recursion-i/250/principle-of-recursion/1681/)
+Source: [Leetcode.com](https://leetcode.com/explore/learn/card/recursion-i/251/scenario-i-recurrence-relation/2378/)
 
  
