@@ -7,6 +7,8 @@ A binary tree's **maximum** depth is the number of nodes along the longest path 
  
 
 **Example 1:**
+![tmp-tree](https://user-images.githubusercontent.com/51165242/236701513-74055aa4-6710-458a-a9d5-2d02b249bff8.jpg)
+
 ```
 Input: root = [3,9,20,null,null,15,7]
 Output: 3
